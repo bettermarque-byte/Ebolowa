@@ -23,7 +23,7 @@ const Services = dynamic(() => import("./Services"), {
 });
 
 
-//Home Page Wrapper
+
 const HomePageWrapper = () => {
   //Smooth Scroll
   useEffect(() => {
