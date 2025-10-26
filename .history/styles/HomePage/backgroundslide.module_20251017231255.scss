@@ -1,0 +1,99 @@
+.image__container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.8);
+}
+
+.slide{
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  img{
+    object-fit: cover;
+  object-position: center;
+  transform-origin: center center;
+  }
+}
+
+/* BackgroundSlideshow.module.scss */
+
+/* Keyframes:
+   The animation runs across the full loop duration (set per slide).
+   Each slide receives an animationDelay so only one is active at a time.
+*/
+@keyframes bgZoomFade {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  /* quick fade-in at start of its active window */
+  8% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* scale up through most of the active window */
+  92% {
+    opacity: 1;
+    transform: scale(var(--slide-scale, 1.2));
+  }
+
+  /* fade out at end */
+  100% {
+    opacity: 0;
+    transform: scale(var(--slide-scale, 1.2));
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Each slide is a positioned wrapper. The next/image inside uses `fill`. */
+.slide {
+  position: absolute;
+  inset: 0;
+  transform-origin: center center;
+  will-change: transform, opacity;
+
+  /* animation properties; duration & delay assigned inline from component */
+  animation-name: bgZoomFade;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  /* sensible defaults if JS misses props */
+  animation-duration: 6s;
+  animation-delay: 0s;
+  opacity: 0;
+}
+
+/* next/image fill element gets this class; it will cover the wrapper */
+.img {
+  object-fit: cover;
+  object-position: center;
+  /* ensure the image participates in the transform for smoother GPU acceleration */
+  transform-origin: center center;
+}
+
+/* put overlay content above slides */
+.content {
+  position: relative;
+  z-index: 9999;
+}
+
+/* reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  .slide {
+    animation: none !important;
+    opacity: 0;
+  }
+  .slide:first-child {
+    opacity: 1;
+  }
+}

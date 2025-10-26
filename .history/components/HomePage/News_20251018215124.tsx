@@ -1,0 +1,32 @@
+import React from 'react'
+import NewsWrapper from '../ReUsables/NewsWrapper'
+import RoundedButton from '../ReUsables/RoundedButton'
+import styles from "../../styles/HomePage/news.module.scss"
+
+const News = () => {
+  return (
+    <div className={`section ${styles.news__section}`}>
+      <div className={`container ${styles.news__container}`}>
+        <h2 className={styles.news__h2}>Actualités de la ville</h2>
+        <div className={styles.news__content}>
+          <NewsWrapper />
+          <NewsWrapper />
+          <NewsWrapper />
+          <NewsWrapper />
+        </div>
+        <div className={styles.news__button}>
+        <RoundedButton
+            text="Lire la suite"
+            textTransform="initial"
+            fontSize="var(--small-size)"
+            fontFamily="var(--medium-font)"
+            border="1px solid transparent"
+            borderHover="1px solid var(--green)"
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default News

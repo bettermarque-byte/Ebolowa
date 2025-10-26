@@ -1,0 +1,15 @@
+.edito__section{
+  width: 100%;
+  height: auto;
+}
+
+.edito__wrapper{
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--text-color);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  justify-content: space-between;
+}

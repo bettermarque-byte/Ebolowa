@@ -1,0 +1,37 @@
+import React from 'react'
+import IMAGE from "../../public/images/farming.jpg"
+import IMAGE2 from "../../public/images/cocoa.jpg"
+import BackgroundSlideshow from './BackgroundSlideshow'
+import styles from "../../styles/HomePage/herosection.module.scss"
+
+const HeroSection = () => {
+  const backgroundImages = [
+    {
+      src: IMAGE,
+      alt: "Farming"
+    },
+    {
+      src: IMAGE2,
+      alt: "Farming"
+    },
+    {
+      src: IMAGE,
+      alt: "Farming"
+    },
+    {
+      src: IMAGE2,
+      alt: "Farming"
+    }
+  ]
+  return (
+    <div className={styles.hero__section}>
+      <div className={styles.overlay}>
+
+      </div>
+      <BackgroundSlideshow images={backgroundImages} slot = 5
+  scale = 1.2,/>
+    </div>
+  )
+}
+
+export default HeroSection

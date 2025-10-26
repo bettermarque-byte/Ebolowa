@@ -1,0 +1,50 @@
+import React from 'react'
+import ChiffresWrapper from '../ReUsables/ChiffresWrapper'
+import styles from "../../styles/HomePage/chiffres.module.scss"
+
+const Chiffres = () => {
+  const numberData = [
+    {
+      name: "Communes et Arrondissements",
+      number: 2,
+      text: "Deux entités administratives locales coordonnent les services et le développement local durable."
+    },
+    {
+      name: "Communes et Arrondissements",
+      number: 1,
+      text: "Deux entités administratives locales coordonnent les services et le développement local durable."
+    },
+    {
+      name: "Communes et Arrondissements",
+      number: 1,
+      text: "Deux entités administratives locales coordonnent les services et le développement local durable."
+    },
+    {
+      name: "Communes et Arrondissements",
+      number: 56,
+      text: "Deux entités administratives locales coordonnent les services et le développement local durable."
+    },
+    {
+      name: "Densité de population",
+      number: 2679,
+      text: "La densité atteint deux mille six cent soixante-dix-neuf habitants au kilomètre carré."
+    },
+    {
+      name: "Population totale estimée",
+      number: 150000,
+      text: "Une communauté de cent cinquante mille habitants, diverse, dynamique et en croissance."
+    }
+  ]
+  return (
+    <div className={`section ${styles.chiffres__section}`}>
+      <div className={`container ${styles.chiffres__container}`}>
+      <h2 className={styles.chiff__h2}>Ebolowa en chiffres</h2>
+      <div className={styles.chiff__content}>
+        <ChiffresWrapper />
+      </div>
+      </div>
+    </div>
+  )
+}
+
+export default Chiffres

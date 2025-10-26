@@ -1,0 +1,51 @@
+.navigation{
+  width: 100%;
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.svg {
+  height: 100px;
+  width: auto;
+  path {
+    fill: var(--green) !important;
+  }
+}
+
+.navbar__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar{
+  background-color: grey;
+  padding: 0 2rem;
+  margin-top: -2rem;
+  border-radius: 100px;
+}
+
+.navcontent{
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+  list-style: none;
+}
+
+.navlist{
+  position: relative;
+}
+
+.nav__label{
+  font-family: var(--roman-font);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  cursor: pointer;
+  padding: 1.5rem 0;
+}

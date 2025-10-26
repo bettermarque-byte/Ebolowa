@@ -1,0 +1,61 @@
+.rounded{
+  height: calc(58px - 12px);
+  padding: 0 1rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--green);
+  color: white;
+  border-radius: 14px;
+  transition: all 0.5s ease;
+  width: max-content;
+  border: var(--border, none);
+  background-color: var(--background, var(--green));
+  color: var(--color, white);
+
+  span{
+    margin-top: -0.05rem;
+  }
+
+  &:hover{
+    background-color: var(--light-green);
+    color: var(--green);
+    border: var(--borderhover, none);
+    background-color: var(--backhover, var(--light-green));
+    color: var(--colorhover, var(--green));
+  }
+}
+
+.rounded2{
+  height: calc(58px - 12px);
+  padding: 0 1rem;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(1rem);
+  color: white;
+  border-radius: 14px;
+  transition: all 0.5s ease;
+  width: max-content;
+
+  span{
+    margin-top: -0.1rem;
+  }
+
+  &:hover{
+    background-color: var(--light-green);
+    color: var(--green);
+  }
+}
+
+//Responsive Desigh
+@media screen and (max-width: 630px) {
+  .rounded{
+    height: calc(58px - 12px);
+    padding: 0 1rem;
+  }
+  
+  .rounded2{
+    height: calc(5px - 12px);
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,237 @@
+.navigation {
+  width: 100%;
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.svg {
+  height: 100px;
+  width: auto;
+  path {
+    fill: var(--body-color) !important;
+  }
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  padding: 0 6px 0 0rem;
+  margin-top: -0.5rem;
+  border-radius: 20px;
+  position: relative;
+  
+  &::after{
+    content: "";
+    inset: 0;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(1rem); 
+    border-radius: 20px;
+  }
+}
+
+.navcontent {
+  display: flex;
+  column-gap: 1.5rem;
+  align-items: center;
+  list-style: none;
+}
+
+.navlist {
+  position: relative;
+
+  svg {
+    transform: none;
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    svg {
+      transform: rotate(-180deg);
+    }
+
+    .link__modal1 {
+      .links {
+        max-height: 1000px;
+      }
+    }
+
+    .link__modal2 {
+      .links2 {
+        max-height: 1000px;
+      }
+    }
+
+    .link__modal3 {
+      .links {
+        max-height: 1000px;
+      }
+    }
+  }
+}
+
+.nav__1 {
+  padding-left: 1.5rem;
+}
+
+.nav__label {
+  font-family: var(--medium-font);
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  cursor: pointer;
+  padding: 1.2rem 0 1.2rem;
+  color: var(--body-color);
+
+  svg {
+    margin-top: 0.1rem;
+  }
+}
+
+.link__modal1 {
+  position: absolute;
+  left: 0rem;
+  top: calc(100% + 6px);
+  border-radius: 1.2rem;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.2);
+  backdrop-filter: blur(1rem);    
+  z-index: 50;                               
+  isolation: isolate;
+}
+
+.link__modal2 {
+  position: absolute;
+  left: -1.5rem;
+  top: calc(100% + 6px);
+  background-color: rgba(0,0,0,0.2);
+  backdrop-filter: blur(1rem);
+  list-style: none;
+  overflow: hidden;
+  border-radius: 1.2rem;
+}
+
+.link__modal3 {
+  position: absolute;
+  left: 0%;
+  top: calc(100% + 6px);
+  transform: translateX(-38%);
+  border-radius: 1.2rem;
+  background-color: rgba(0,0,0,0.2);
+  backdrop-filter: blur(1rem);
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+
+  &.special__lm3{
+    transform: translateX(-42%) !important;
+  }
+}
+
+.links {
+  width: 250px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-height: 0;
+  transition: all 0.7s ease;
+}
+
+.links2 {
+  width: 250px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-height: 0;
+  transition: all 0.7s ease;
+}
+
+.link__span {
+  width: 100%;
+  padding: 1rem 0 1rem 1.5rem;
+  text-transform: uppercase;
+  font-size: calc(var(--small-font-size) - 0.05rem);
+  font-family: var(--medium-font);
+  color: rgba(255,255,255,0.7);
+}
+
+.main__links {
+  width: 100%;
+  padding: 1rem 0 1rem 1.5rem;
+  border-top: 1px solid #e0e4e0;
+  color: var(--body-color);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  font-family: var(--medium-font);
+  font-size: calc(var(--normal-font-size) - 0.05rem);
+
+  &:hover {
+    background-color: var(--light-green);
+    color: var(--green);
+  }
+}
+
+.main__links2 {
+  width: 100%;
+  padding: 1rem 0 1rem 1.5rem;
+  border-bottom: 1px solid #e0e4e0;
+  color: var(--body-color);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  font-family: var(--medium-font);
+  font-size: calc(var(--normal-font-size) - 0.05rem);
+
+  &:hover {
+    background-color: var(--light-green);
+    color: var(--green);
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.divider {
+  width: 0.05rem;
+  height: 404px;
+  display: block;
+  background-color: #e0e4e0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.divider2 {
+  width: 0.05rem;
+  height: 404px;
+  display: block;
+  background-color: #e0e4e0;
+  position: absolute;
+  left: 250px;
+}
+
+.divider3 {
+  width: 0.05rem;
+  height: 404px;
+  display: block;
+  background-color: #e0e4e0;
+  position: absolute;
+  left: 500px;
+}

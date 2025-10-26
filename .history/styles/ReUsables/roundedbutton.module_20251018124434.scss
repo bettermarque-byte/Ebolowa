@@ -1,0 +1,15 @@
+.rounded{
+  height: calc(58px - 12px);
+  width: auto;
+  padding: 0 1.5rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--green);
+  color: white;
+  border-radius: 16px;
+
+  span{
+    margin-top: -0.1rem;
+    font-family: var(--roman-font);
+  }
+}

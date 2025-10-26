@@ -1,0 +1,116 @@
+// import React from "react";
+// import Link from "next/link";
+// import styles from "../../styles/ReUsables/roundedbutton.module.scss";
+
+// const RoundedButton = ({
+//   text,
+//   textTransform,
+//   fontSize,
+//   fontFamily,
+//   border,
+//   borderHover,
+//   normal,
+//   link,
+//   target
+// }: {
+//   text: string;
+//   textTransform: React.CSSProperties["textTransform"];
+//   fontSize: string;
+//   fontFamily: string;
+//   border?: string;
+//   borderHover?: string;
+//   normal?: boolean;
+//   link?: string
+//   target?: string
+// }) => {
+//   if (normal) {
+//     return (
+//       <div
+//         className={styles.rounded}
+//         style={{
+//           ["--border" as any]: border,
+//           ["--borderhover" as any]: borderHover,
+//         }}
+//       >
+//         <span style={{ textTransform: textTransform, fontSize, fontFamily }}>
+//           {text}
+//         </span>
+//       </div>
+//     );
+//   } else
+//     return (
+//       <Link
+//         href={link ? link : "/"}
+//         className={styles.rounded}
+//         style={{
+//           ["--border" as any]: border,
+//           ["--borderhover" as any]: borderHover,
+//         }}
+//         target={target}
+//       >
+//         <span style={{ textTransform: textTransform, fontSize, fontFamily }}>
+//           {text}
+//         </span>
+//       </Link>
+//     );
+// };
+
+
+// export default RoundedButton;
+import React from "react";
+import Link from "next/link";
+import styles from "../../styles/ReUsables/roundedbutton.module.scss";
+
+const RoundedButton = ({
+  text,
+  textTransform,
+  fontSize,
+  fontFamily,
+  border,
+  borderHover,
+  normal,
+  link,
+  target
+}: {
+  text: string;
+  textTransform: React.CSSProperties["textTransform"];
+  fontSize: string;
+  fontFamily: string;
+  border?: string;
+  borderHover?: string;
+  normal?: boolean;
+  link?: string;
+  target?: string;
+}) => {
+  const buttonStyle = {
+    "--border": border,
+    "--borderhover": borderHover,
+  } as React.CSSProperties;
+
+  const textStyle: React.CSSProperties = {
+    textTransform,
+    fontSize,
+    fontFamily,
+  };
+
+  if (normal) {
+    return (
+      <div className={styles.rounded} style={buttonStyle}>
+        <span style={textStyle}>{text}</span>
+      </div>
+    );
+  }
+
+  return (
+    <Link
+      href={link || "/"}
+      className={styles.rounded}
+      style={buttonStyle}
+      target={target}
+    >
+      <span style={textStyle}>{text}</span>
+    </Link>
+  );
+};
+
+export default RoundedButton;

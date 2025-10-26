@@ -1,0 +1,33 @@
+.edito__section{
+  width: 100%;
+  height: auto;
+  font-size: ;
+}
+
+.edito__wrapper{
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--text-color);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  justify-content: space-between;
+  padding: 1rem 2.5rem 1rem 1rem;
+}
+
+.edito__left{
+  width: 45%;
+  aspect-ratio: 800/700;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+
+  img{
+    object-fit: cover;
+  }
+}
+
+.edito__right{
+  width: 55%;
+}

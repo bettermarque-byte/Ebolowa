@@ -1,0 +1,23 @@
+.rounded{
+  height: calc(58px - 12px);
+  width: auto;
+  padding: 0 1rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--green);
+  color: white;
+  border-radius: 14px;
+  transition: all 0.5s ease;
+
+  span{
+    margin-top: -0.1rem;
+    font-family: var(--semibold-font);
+    text-transform: uppercase;
+    font-size: var(--small-font-size);
+  }
+
+  &:hover{
+    background-color: var(--light-green);
+    color: var(--green);
+  }
+}

@@ -1,0 +1,29 @@
+.navigation{
+  width: 100%;
+  padding: 1.25rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+}
+
+.svg {
+  height: 100px;
+  width: auto;
+  path {
+    fill: var(--green) !important;
+  }
+}
+
+.navbar__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.navbar{
+  display: flex;
+  co
+}

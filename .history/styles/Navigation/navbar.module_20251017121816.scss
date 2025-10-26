@@ -1,0 +1,16 @@
+.navigation{
+  width: 100%;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.svg {
+  height: 100px;
+  width: auto;
+  path {
+    fill: var(--green) !important;
+  }
+}
+

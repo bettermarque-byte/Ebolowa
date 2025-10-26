@@ -1,0 +1,23 @@
+import React from "react";
+import Documented from "@/utils/icons/Documented";
+import RoundedButton from "./RoundedButton";
+import styles from "../../styles/HomePage/services.module.scss";
+
+const ServicesBox = () => {
+  return (
+    <div className={styles.serv__box}>
+      <div className={styles.serv__svg}>
+        <Documented />
+      </div>
+      <h3 className={styles.serv__h3}>Démarches administratives</h3>
+      <RoundedButton
+        text="En savoir plus"
+        textTransform="initial"
+        fontSize="var(--normal-font-size)"
+        fontFamily="var(--medium-font)"
+      /
+    </div>
+  );
+};
+
+export default ServicesBox;

@@ -1,0 +1,82 @@
+.ls__container {
+  position: relative;
+
+  svg {
+    transform: none;
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    svg {
+      transform: rotate(-180deg);
+    }
+
+    .selector {
+      max-height: 1000px;
+    }
+  }
+}
+
+.selected {
+  color: white;
+}
+
+.ls__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  cursor: pointer;
+  font-family: var(--medium-font);
+  padding: 1.2rem 0 1.2rem;
+
+  svg {
+    margin-top: 0.1rem;
+  }
+}
+
+.selector {
+  position: absolute;
+  left: 30%;
+  transform: translate(-50%);
+  top: calc(100% + 6px);
+  background-color: rgba(0,0,0,0.15);
+  backdrop-filter: blur(1rem);
+  list-style: none;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  max-height: 0;
+  transition: all 0.7s ease;
+}
+
+.s__item {
+  width: 60px;
+  padding: 1rem 0 1rem 0rem;
+  border-bottom: 1px solid #e0e4e0;
+  color: var(--body-color);
+  display: grid;
+  place-items: center;
+  font-family: var(--medium-font);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  user-select: none;
+  cursor: pointer;
+
+  &.active__select{
+    cursor: default;
+    color: #c3c4c3;
+
+    &:hover{
+      background-color: transparent;
+      color: #c3c4c3;
+    }
+  }
+
+  &:hover {
+    background-color: var(--light-green);
+    color: var(--green);
+  }
+
+  &:last-child{
+    border-bottom: none;
+  }
+}

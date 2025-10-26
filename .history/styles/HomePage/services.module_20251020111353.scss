@@ -1,0 +1,64 @@
+.services__section {
+  width: 100%;
+  height: auto;
+}
+
+.services__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.services__h2 {
+  font-size: var(--h2-font-size);
+  color: var(--black);
+  letter-spacing: -3px;
+  font-weight: 400;
+  font-family: var(--medium-font);
+}
+
+.services__slider {
+  width: 100%;
+  height: auto;
+}
+
+.serv__swiper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+//Services Box
+.serv__box {
+  width: 325px;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 2rem;
+}
+
+.serv__svg {
+  svg {
+    width: 80px;
+    height: auto;
+  }
+}
+
+.serv__h3 {
+  font-size: calc(var(--h3-font-size) - 0.15rem);
+  color: var(--black);
+  letter-spacing: -1px;
+  text-align: center;
+  font-weight: 400;
+  font-family: var(--medium-font);
+  line-height: 1.1;
+}
+
+.serv__button {
+  margin-top: auto;
+}

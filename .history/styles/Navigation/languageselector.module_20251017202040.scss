@@ -1,0 +1,32 @@
+.navlist {
+  position: relative;
+
+  svg {
+    transform: none;
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    svg {
+      transform: rotate(-180deg);
+    }
+
+    .link__modal1 {
+      .links {
+        max-height: 1000px;
+      }
+    }
+
+    .link__modal2 {
+      .links2 {
+        max-height: 1000px;
+      }
+    }
+
+    .link__modal3 {
+      .links {
+        max-height: 1000px;
+      }
+    }
+  }
+}

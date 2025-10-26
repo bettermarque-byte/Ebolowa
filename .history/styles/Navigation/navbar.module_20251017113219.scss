@@ -1,0 +1,14 @@
+.svg__div{
+  width: 100px;
+  aspect-ratio: 100/44;
+}
+
+.svg {
+  scale: 0.5;
+  position: absolute;
+  top: -100;
+  left: 0;
+  path {
+    fill: black !important;
+  }
+}
