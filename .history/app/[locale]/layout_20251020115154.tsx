@@ -15,7 +15,7 @@ const medium = localFont({
 });
 
 const semibold = localFont({
-  src: "../fonts/Inter-SemiBold.ttf",
+  src: "../fonts/Inter-Semibold.ttf",
   variable: "--semibold-font",
 });
 
