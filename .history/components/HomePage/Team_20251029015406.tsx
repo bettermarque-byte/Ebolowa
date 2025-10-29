@@ -40,10 +40,10 @@ const TeamContent = dynamic(() => import("./TeamContent"), {
     />
   ),
 });
-
 const Team = () => {
   //Translations
   const { t } = useTranslation();
+
 
   const teamsData = [
     {

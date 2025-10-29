@@ -30,9 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { t } = await initTranslations(locale, i18nNamespaces);
   
   return {
-    title: t("HomePage:homemetatitle"),
-    description: t("HomePage:proposhero"),
-    applicationName: "Communauté Urbaine d'Ebolowa",
+    title: t("Navigation:homemetatitle"),
+    description: t("HomePage:herotext"),
+    applicationName: "Communauté Urabine",
     twitter: {
       card: "summary_large_image"
     }

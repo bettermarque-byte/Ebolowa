@@ -60,7 +60,7 @@ export default function LanguageSelector({
 
     // // // router.refresh();
     // startTransition(() => {
-    //   router.replace(newPathname, {scroll: false});
+    //   router.push(newPathname, {scroll: false});
     // });
   };
 

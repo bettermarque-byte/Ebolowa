@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect, startTransition } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import styles from "../styles/Navigation/languageselector.module.scss";
@@ -14,7 +14,7 @@ export default function LanguageSelector({
   const { i18n } = useTranslation();
   const currentLocale = i18n.language;
   const currentPathname = usePathname();
-  const router = useRouter();
+  const router = use
   const [activeSelector, setActiveSelector] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -58,10 +58,10 @@ export default function LanguageSelector({
     // update i18next language so client strings rerender
     i18n.changeLanguage(newLocale);
 
-    // // // router.refresh();
-    // startTransition(() => {
-    //   router.replace(newPathname, {scroll: false});
-    // });
+    startTransition(() => {
+      // use replace so you don't add history if you already pushState, or use push
+      router.refre;
+    });
   };
 
   return (

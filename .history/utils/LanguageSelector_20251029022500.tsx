@@ -58,10 +58,18 @@ export default function LanguageSelector({
     // update i18next language so client strings rerender
     i18n.changeLanguage(newLocale);
 
-    // // // router.refresh();
     // startTransition(() => {
-    //   router.replace(newPathname, {scroll: false});
+    //   // use replace so you don't add history if you already pushState, or use push
+    //   router.refresh();
     // });
+
+      // wait 2s (does not block the UI thread)
+  await sleep(2000);
+
+  if (!mounted.current) return;
+  startTransition(() => {
+    router.replace(newPathname);
+  });
   };
 
   return (

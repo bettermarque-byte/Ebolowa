@@ -18,10 +18,10 @@ const semibold = localFont({
   src: "../fonts/Inter-SemiBold.ttf",
   variable: "--semibold-font",
 });
-
 type Props = {
   params: Promise<{ locale: string }>
 }
+
 
 //MetaData
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -30,9 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { t } = await initTranslations(locale, i18nNamespaces);
   
   return {
-    title: t("HomePage:homemetatitle"),
-    description: t("HomePage:proposhero"),
-    applicationName: "Communauté Urbaine d'Ebolowa",
+    title: t("Navigation:homemetatitle"),
+    description: t("HomePage:herotext"),
+    applicationName: "Pikwe Estates",
     twitter: {
       card: "summary_large_image"
     }

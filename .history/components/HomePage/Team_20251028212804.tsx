@@ -28,22 +28,22 @@ import SwiperLoader from "./SwiperLoader";
 import dynamic from "next/dynamic";
 import styles from "../../styles/HomePage/team.module.scss";
 
-const TeamContent = dynamic(() => import("./TeamContent"), {
-  ssr: false,
-  loading: () => (
-    <SwiperLoader
-      height="440px"
-      height2="382px"
-      height3="360px"
-      aspectRatio="10/13"
-      numberr={21}
-    />
-  ),
-});
-
 const Team = () => {
   //Translations
   const { t } = useTranslation();
+
+  const TeamContent = dynamic(() => import("./TeamContent"), {
+    ssr: true,
+    loading: () => (
+      <SwiperLoader
+        height="440px"
+        height2="382px"
+        height3="360px"
+        aspectRatio="10/13"
+        numberr={21}
+      />
+    ),
+  });
 
   const teamsData = [
     {

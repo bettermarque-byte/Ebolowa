@@ -58,7 +58,7 @@ export default function LanguageSelector({
     // update i18next language so client strings rerender
     i18n.changeLanguage(newLocale);
 
-    // // // router.refresh();
+    // // router.refresh();
     // startTransition(() => {
     //   router.replace(newPathname, {scroll: false});
     // });

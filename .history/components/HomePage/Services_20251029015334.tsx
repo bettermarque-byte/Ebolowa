@@ -5,11 +5,14 @@ import Documented from "@/utils/icons/Documented";
 import Keys from "@/utils/icons/Keys";
 import { useTranslation } from "react-i18next";
 import Handshake from "@/utils/icons/Handshake";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { swiperSettings } from "@/utils";
 import Urbanism from "@/utils/icons/Urbanism";
 import Police from "@/utils/icons/Police";
 import styles from "../../styles/HomePage/services.module.scss";
 import SwiperLoader from "./SwiperLoader";
 import dynamic from "next/dynamic";
+import ServicesBox from "../ReUsables/ServicesBox";
 
 // Import Swiper styles
 import "swiper/css";
