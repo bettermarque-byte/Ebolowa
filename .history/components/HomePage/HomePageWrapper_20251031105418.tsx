@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Navigation/Navbar";
 import HeroSection from "./HeroSection";
 import Editorial from "./Editorial";
@@ -40,7 +40,7 @@ const HomePageWrapper = () => {
 
   return (
     <>
-      <AnimatePresence
+      {/* <AnimatePresence
         mode="wait"
         onExitComplete={() => {
           setLocalState("InitialState");
@@ -68,7 +68,7 @@ const HomePageWrapper = () => {
           />
         )}
       </AnimatePresence>
-      <Footer setActiveNeider={setActiveNeider} />
+      <Footer setActiveNeider={setActiveNeider} /> */}
     </>
   );
 };

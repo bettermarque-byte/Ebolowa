@@ -64,7 +64,7 @@ const Navbar = ({
               });
 
               gsap.to(svg.querySelectorAll("path"), {
-                attr: { fill: "#2F7A3E" },
+                attr: { fill: "#2F7A3E", c },
                 duration: 0.6,
               });
             } else if (self.direction === -1 && self.scroll() < lastScroll) {

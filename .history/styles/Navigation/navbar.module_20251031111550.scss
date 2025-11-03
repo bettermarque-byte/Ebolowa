@@ -12,7 +12,9 @@
 .svg {
   height: 100px;
   width: auto;
-
+  path {
+    fill: var(--body-color);
+  }
 }
 
 .navbar__container {

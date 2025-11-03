@@ -50,10 +50,9 @@ const Navbar = ({
             });
 
             gsap.to(svg.querySelectorAll("path"), {
-              attr: { fill: "white" },
+              attr: { fill: "wh" },
               duration: 0.6,
             });
-
           } else {
             // Then animate the translateY based on scroll direction.
             if (self.direction === 1 && self.scroll() > lastScroll) {
