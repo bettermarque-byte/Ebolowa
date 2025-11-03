@@ -39,7 +39,8 @@ const HomePageWrapper = () => {
   // const [animFinished, setAnimFinished] = useState(false);
 
   return (
-    <></> //<AnimatePresence
+    <>
+    //</>  <AnimatePresence
     //     mode="wait"
     //     onExitComplete={() => {
     //       setLocalState("InitialState");
@@ -68,6 +69,7 @@ const HomePageWrapper = () => {
     //     )}
     //   </AnimatePresence>
     //   <Footer setActiveNeider={setActiveNeider} />
+    // </>
   );
 };
 

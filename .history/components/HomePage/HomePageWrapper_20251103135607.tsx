@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // import Navbar from "../Navigation/Navbar";
 // import HeroSection from "./HeroSection";
 // import Editorial from "./Editorial";
@@ -39,7 +39,8 @@ const HomePageWrapper = () => {
   // const [animFinished, setAnimFinished] = useState(false);
 
   return (
-    <></> //<AnimatePresence
+    // <>
+    //   <AnimatePresence
     //     mode="wait"
     //     onExitComplete={() => {
     //       setLocalState("InitialState");
@@ -68,6 +69,7 @@ const HomePageWrapper = () => {
     //     )}
     //   </AnimatePresence>
     //   <Footer setActiveNeider={setActiveNeider} />
+    // </>
   );
 };
 

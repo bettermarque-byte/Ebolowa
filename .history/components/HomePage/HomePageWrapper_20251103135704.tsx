@@ -68,6 +68,7 @@ const HomePageWrapper = () => {
     //     )}
     //   </AnimatePresence>
     //   <Footer setActiveNeider={setActiveNeider} />
+    // </>
   );
 };
 
